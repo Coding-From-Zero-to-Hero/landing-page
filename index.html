@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteCraft — Professional Websites for Canadian Businesses</title>
+  <meta name="description" content="SiteCraft builds professional, modern websites for startups and small businesses across Canada. Get online today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans text-gray-900 antialiased">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-1 text-2xl font-extrabold tracking-tight">
+          <span class="text-gray-900">Site</span><span class="text-indigo-600">Craft</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a href="#stats" data-i18n="nav_why" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">Why a Website</a>
+          <a href="#benefits" data-i18n="nav_benefits" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">Benefits</a>
+          <a href="#packages" data-i18n="nav_packages" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">Packages</a>
+          <a href="#faq" data-i18n="nav_faq" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">FAQ</a>
+          <a href="#contact" data-i18n="nav_contact" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Language Toggle + Mobile Hamburger -->
+        <div class="flex items-center space-x-3">
+          <!-- Language Switcher -->
+          <div class="flex items-center rounded-full border border-gray-200 overflow-hidden text-sm font-medium">
+            <button id="lang-en" class="lang-btn px-3 py-1.5 bg-indigo-600 text-white transition-colors" onclick="setLanguage('en')">EN</button>
+            <button id="lang-fr" class="lang-btn px-3 py-1.5 text-gray-500 hover:text-gray-700 transition-colors" onclick="setLanguage('fr')">FR</button>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button id="menu-toggle" class="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition" aria-label="Toggle menu">
+            <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#stats" data-i18n="nav_why" class="mobile-nav-link block text-base font-medium text-gray-700 hover:text-indigo-600 transition-colors">Why a Website</a>
+        <a href="#benefits" data-i18n="nav_benefits" class="mobile-nav-link block text-base font-medium text-gray-700 hover:text-indigo-600 transition-colors">Benefits</a>
+        <a href="#packages" data-i18n="nav_packages" class="mobile-nav-link block text-base font-medium text-gray-700 hover:text-indigo-600 transition-colors">Packages</a>
+        <a href="#faq" data-i18n="nav_faq" class="mobile-nav-link block text-base font-medium text-gray-700 hover:text-indigo-600 transition-colors">FAQ</a>
+        <a href="#contact" data-i18n="nav_contact" class="mobile-nav-link block text-base font-medium text-gray-700 hover:text-indigo-600 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section id="hero" class="relative pt-28 lg:pt-40 pb-20 lg:pb-32 overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-indigo-50 -z-10"></div>
+      <div class="absolute top-20 right-0 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-40 -z-10"></div>
+      <div class="absolute bottom-0 left-0 w-72 h-72 bg-gray-200 rounded-full blur-3xl opacity-30 -z-10"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 mb-8">
+          <span class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></span>
+          <span data-i18n="hero_badge" class="text-sm font-medium text-indigo-700">Web solutions for Canadian businesses</span>
+        </div>
+
+        <h1 data-i18n="hero_title" class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 leading-tight tracking-tight">
+          Your Business Deserves<br>to Be Found Online
+        </h1>
+
+        <p data-i18n="hero_subtitle" class="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          We build professional, modern websites for startups and small businesses across Canada. Get your business online — fast, affordable, and hassle-free.
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contact" data-i18n="hero_cta" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 shadow-lg shadow-indigo-200 transition-all duration-200 hover:shadow-xl hover:shadow-indigo-200 hover:-translate-y-0.5">
+            Get Started Today
+          </a>
+          <a href="#packages" data-i18n="hero_cta_secondary" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border-2 border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-indigo-300 hover:text-indigo-600 transition-all duration-200">
+            View Packages
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STATS ==================== -->
+    <section id="stats" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 data-i18n="stats_title" class="text-3xl sm:text-4xl font-bold text-gray-900">
+            Why Your Business Needs a Website
+          </h2>
+          <p data-i18n="stats_subtitle" class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+            The numbers speak for themselves. In today's digital world, your online presence is your storefront.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Stat 1 -->
+          <div class="reveal-card group text-center p-8 rounded-2xl border border-gray-100 hover:border-indigo-100 hover:shadow-lg hover:shadow-indigo-50 transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-indigo-50 text-indigo-600 mb-5 group-hover:bg-indigo-100 transition-colors">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+            <div class="text-4xl font-extrabold text-indigo-600 mb-2" data-i18n="stat1_number">97%</div>
+            <p data-i18n="stat1_text" class="text-gray-600 leading-relaxed">of consumers search online for local businesses before visiting</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="reveal-card group text-center p-8 rounded-2xl border border-gray-100 hover:border-indigo-100 hover:shadow-lg hover:shadow-indigo-50 transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-indigo-50 text-indigo-600 mb-5 group-hover:bg-indigo-100 transition-colors">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div class="text-4xl font-extrabold text-indigo-600 mb-2" data-i18n="stat2_number">75%</div>
+            <p data-i18n="stat2_text" class="text-gray-600 leading-relaxed">of users judge a company's credibility by its website design</p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="reveal-card group text-center p-8 rounded-2xl border border-gray-100 hover:border-indigo-100 hover:shadow-lg hover:shadow-indigo-50 transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-indigo-50 text-indigo-600 mb-5 group-hover:bg-indigo-100 transition-colors">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            </div>
+            <div class="text-4xl font-extrabold text-indigo-600 mb-2" data-i18n="stat3_number">81%</div>
+            <p data-i18n="stat3_text" class="text-gray-600 leading-relaxed">of shoppers research a business online before making a purchase</p>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="reveal-card group text-center p-8 rounded-2xl border border-gray-100 hover:border-indigo-100 hover:shadow-lg hover:shadow-indigo-50 transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-indigo-50 text-indigo-600 mb-5 group-hover:bg-indigo-100 transition-colors">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636m12.728 12.728A9 9 0 015.636 5.636"/></svg>
+            </div>
+            <div class="text-4xl font-extrabold text-indigo-600 mb-2" data-i18n="stat4_number">56%</div>
+            <p data-i18n="stat4_text" class="text-gray-600 leading-relaxed">of consumers don't trust a business that has no website</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BENEFITS ==================== -->
+    <section id="benefits" class="py-20 lg:py-28 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 data-i18n="benefits_title" class="text-3xl sm:text-4xl font-bold text-gray-900">
+            How a Website Helps Your Business Grow
+          </h2>
+          <p data-i18n="benefits_subtitle" class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+            A professional website is more than a digital business card — it's your most powerful growth tool.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Benefit 1 -->
+          <div class="reveal-card bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 data-i18n="benefit1_title" class="text-xl font-semibold text-gray-900 mb-3">Open 24/7</h3>
+            <p data-i18n="benefit1_text" class="text-gray-600 leading-relaxed">Your website works around the clock, letting customers learn about your business anytime, anywhere — even while you sleep.</p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="reveal-card bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+            </div>
+            <h3 data-i18n="benefit2_title" class="text-xl font-semibold text-gray-900 mb-3">Build Trust & Credibility</h3>
+            <p data-i18n="benefit2_text" class="text-gray-600 leading-relaxed">A polished website signals professionalism and legitimacy. First impressions happen online — make yours count.</p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="reveal-card bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <h3 data-i18n="benefit3_title" class="text-xl font-semibold text-gray-900 mb-3">Reach More Customers</h3>
+            <p data-i18n="benefit3_text" class="text-gray-600 leading-relaxed">Expand beyond word-of-mouth. A website lets you attract new customers from across your city, province, or all of Canada.</p>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="reveal-card bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            </div>
+            <h3 data-i18n="benefit4_title" class="text-xl font-semibold text-gray-900 mb-3">Be Found on Google</h3>
+            <p data-i18n="benefit4_text" class="text-gray-600 leading-relaxed">When people search for services you offer, your website helps you appear in results. No site means you're invisible online.</p>
+          </div>
+
+          <!-- Benefit 5 -->
+          <div class="reveal-card bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 data-i18n="benefit5_title" class="text-xl font-semibold text-gray-900 mb-3">Competitive Edge</h3>
+            <p data-i18n="benefit5_text" class="text-gray-600 leading-relaxed">Many small businesses still don't have a website. Getting online now puts you ahead of competitors who haven't made the leap.</p>
+          </div>
+
+          <!-- Benefit 6 -->
+          <div class="reveal-card bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 data-i18n="benefit6_title" class="text-xl font-semibold text-gray-900 mb-3">Cost-Effective Marketing</h3>
+            <p data-i18n="benefit6_text" class="text-gray-600 leading-relaxed">A website is your most affordable long-term marketing tool. It works every day to attract, inform, and convert visitors into customers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PACKAGES ==================== -->
+    <section id="packages" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 data-i18n="packages_title" class="text-3xl sm:text-4xl font-bold text-gray-900">
+            Simple, Transparent Packages
+          </h2>
+          <p data-i18n="packages_subtitle" class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+            Choose the plan that fits your needs. No hidden fees, no surprises.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- Package 1: Start Online -->
+          <div class="reveal-card relative flex flex-col p-8 rounded-2xl border-2 border-gray-200 hover:border-indigo-200 transition-all duration-300">
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-gray-900">Start Online</h3>
+              <p data-i18n="pkg1_desc" class="mt-2 text-gray-500">Perfect for new businesses that need to establish their online presence.</p>
+            </div>
+
+            <div class="mb-6">
+              <div class="inline-flex items-center px-3 py-1 bg-green-50 border border-green-100 rounded-full mb-3">
+                <span data-i18n="pkg1_discount" class="text-xs font-semibold text-green-700">Launch Offer — Save 33%</span>
+              </div>
+              <div class="flex items-baseline gap-3">
+                <span class="text-4xl font-extrabold text-gray-900">$500</span>
+                <span data-i18n="pkg1_original" class="text-lg text-gray-400 line-through">$750</span>
+              </div>
+            </div>
+
+            <ul class="space-y-3 mb-8 flex-1">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span data-i18n="pkg1_f1" class="text-gray-600">Professional one-page website</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span data-i18n="pkg1_f2" class="text-gray-600">Mobile-responsive design</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span data-i18n="pkg1_f3" class="text-gray-600">Contact form integration</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span data-i18n="pkg1_f4" class="text-gray-600">Basic SEO setup</span>
+              </li>
+            </ul>
+
+            <a href="#contact" data-i18n="pkg1_cta" class="block text-center px-6 py-3.5 border-2 border-indigo-600 text-indigo-600 font-semibold rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-200">
+              Get Started
+            </a>
+          </div>
+
+          <!-- Package 2: Grow Online -->
+          <div class="reveal-card relative flex flex-col p-8 rounded-2xl border-2 border-indigo-600 shadow-lg shadow-indigo-100 transition-all duration-300">
+            <!-- Popular Badge -->
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+              <span data-i18n="pkg2_badge" class="inline-block px-4 py-1 bg-indigo-600 text-white text-sm font-semibold rounded-full">Most Popular</span>
+            </div>
+
+            <div class="mb-6 pt-2">
+              <h3 class="text-2xl font-bold text-gray-900">Grow Online</h3>
+              <p data-i18n="pkg2_desc" class="mt-2 text-gray-500">For businesses ready to grow with a full-featured online presence.</p>
+            </div>
+
+            <div class="mb-6">
+              <div class="inline-flex items-center px-3 py-1 bg-green-50 border border-green-100 rounded-full mb-3">
+                <span data-i18n="pkg2_discount" class="text-xs font-semibold text-green-700">Launch Offer — Save 27%</span>
+              </div>
+              <div class="flex items-baseline gap-3">
+                <span class="text-4xl font-extrabold text-gray-900">$1,100</span>
+                <span data-i18n="pkg2_original" class="text-lg text-gray-400 line-through">$1,500</span>
+              </div>
+            </div>
+
+            <ul class="space-y-3 mb-8 flex-1">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span data-i18n="pkg2_f1" class="text-gray-600">Multi-page website (up to 5 pages)</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span data-i18n="pkg2_f2" class="text-gray-600">Mobile-responsive design</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span data-i18n="pkg2_f3" class="text-gray-600">Advanced SEO optimization</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span data-i18n="pkg2_f4" class="text-gray-600">Google Analytics integration</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span data-i18n="pkg2_f5" class="text-gray-600">Social media integration</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span data-i18n="pkg2_f6" class="text-gray-600">Priority support</span>
+              </li>
+            </ul>
+
+            <a href="#contact" data-i18n="pkg2_cta" class="block text-center px-6 py-3.5 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 shadow-lg shadow-indigo-200 transition-all duration-200 hover:shadow-xl hover:shadow-indigo-200">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section id="faq" class="py-20 lg:py-28 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 data-i18n="faq_title" class="text-3xl sm:text-4xl font-bold text-gray-900">
+            Frequently Asked Questions
+          </h2>
+          <p data-i18n="faq_subtitle" class="mt-4 text-lg text-gray-500">
+            Everything you need to know before getting started.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left">
+              <span data-i18n="faq1_q" class="text-lg font-semibold text-gray-900 pr-4">Why does my small business need a website?</span>
+              <svg class="faq-chevron w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 pb-5">
+                <p data-i18n="faq1_a" class="text-gray-600 leading-relaxed">A website is your digital storefront. It gives customers a place to find your business, learn about your services, and contact you. Without one, you're missing out on the vast majority of people who search online before making a purchasing decision. It builds credibility and ensures your business is accessible 24/7.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left">
+              <span data-i18n="faq2_q" class="text-lg font-semibold text-gray-900 pr-4">How long does it take to build my website?</span>
+              <svg class="faq-chevron w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 pb-5">
+                <p data-i18n="faq2_a" class="text-gray-600 leading-relaxed">Most projects are completed within 5 to 10 business days, depending on the package and your content readiness. We work efficiently to get you online fast without compromising on quality. You'll be involved at every step to ensure the result matches your vision.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 (maintenance cost) -->
+          <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left">
+              <span data-i18n="faq3_q" class="text-lg font-semibold text-gray-900 pr-4">How much does it cost to maintain a website per year?</span>
+              <svg class="faq-chevron w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 pb-5">
+                <p data-i18n="faq3_a" class="text-gray-600 leading-relaxed">The basic annual costs are very affordable: a domain name (.ca or .com) runs about $15–25/year, and hosting for a static website can be as low as $0–10/month thanks to modern platforms with generous free tiers. SSL certificates are included at no extra cost. So the bare minimum to keep your site live is roughly $20–50/year. If you'd like ongoing support — content updates, design tweaks, performance monitoring — maintenance plans start from $100/year depending on the level of service.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left">
+              <span data-i18n="faq4_q" class="text-lg font-semibold text-gray-900 pr-4">Do I need to update the website myself?</span>
+              <svg class="faq-chevron w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 pb-5">
+                <p data-i18n="faq4_a" class="text-gray-600 leading-relaxed">Not at all. We handle updates and maintenance so you can focus on running your business. If you ever need a change — new hours, updated photos, or additional content — just reach out and we'll take care of it promptly.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left">
+              <span data-i18n="faq5_q" class="text-lg font-semibold text-gray-900 pr-4">How is this different from Wix or Squarespace?</span>
+              <svg class="faq-chevron w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 pb-5">
+                <p data-i18n="faq5_a" class="text-gray-600 leading-relaxed">Website builders like Wix and Squarespace require you to design, write content, and maintain the site yourself. With SiteCraft, we do everything for you — custom design, professional copywriting, SEO setup, and ongoing support. You get a tailor-made site without the learning curve or monthly builder fees.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left">
+              <span data-i18n="faq6_q" class="text-lg font-semibold text-gray-900 pr-4">Will my website work on phones and tablets?</span>
+              <svg class="faq-chevron w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 pb-5">
+                <p data-i18n="faq6_a" class="text-gray-600 leading-relaxed">Absolutely. Every website we build is fully responsive, meaning it looks great and works perfectly on desktops, tablets, and smartphones. Over 60% of web traffic in Canada comes from mobile devices, so this is a top priority for us.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+            <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left">
+              <span data-i18n="faq7_q" class="text-lg font-semibold text-gray-900 pr-4">I already have social media — isn't that enough?</span>
+              <svg class="faq-chevron w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 pb-5">
+                <p data-i18n="faq7_a" class="text-gray-600 leading-relaxed">Social media is great for engagement, but it's not a replacement for a website. You don't own your social profiles — algorithm changes can reduce your visibility overnight. A website is your own space on the internet, fully under your control, and it ranks better on search engines than social media pages.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 data-i18n="contact_title" class="text-3xl sm:text-4xl font-bold text-gray-900">
+            Let's Build Your Website
+          </h2>
+          <p data-i18n="contact_subtitle" class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+            Ready to get your business online? Send us a message and we'll get back to you within 24 hours.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-5xl mx-auto">
+          <!-- Contact Form -->
+          <div class="lg:col-span-3">
+            <form id="contact-form" class="space-y-5" onsubmit="return handleFormSubmit(event)">
+              <div>
+                <label data-i18n="form_name_label" for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Full Name</label>
+                <input type="text" id="name" name="name" required data-i18n-placeholder="form_name_placeholder" placeholder="John Smith" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition-colors outline-none">
+              </div>
+              <div>
+                <label data-i18n="form_email_label" for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email Address</label>
+                <input type="email" id="email" name="email" required data-i18n-placeholder="form_email_placeholder" placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition-colors outline-none">
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1.5"><span data-i18n="form_phone_label">Phone</span> <span data-i18n="form_optional" class="text-gray-400">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" data-i18n-placeholder="form_phone_placeholder" placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition-colors outline-none">
+              </div>
+              <div>
+                <label data-i18n="form_message_label" for="message" class="block text-sm font-medium text-gray-700 mb-1.5">Message</label>
+                <textarea id="message" name="message" rows="4" required data-i18n-placeholder="form_message_placeholder" placeholder="Tell us about your business and what you're looking for..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition-colors outline-none resize-none"></textarea>
+              </div>
+              <button type="submit" data-i18n="form_submit" class="w-full px-6 py-3.5 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 shadow-lg shadow-indigo-200 transition-all duration-200 hover:shadow-xl hover:shadow-indigo-200">
+                Send Message
+              </button>
+            </form>
+            <!-- Success Message -->
+            <div id="form-success" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-xl text-center">
+              <p data-i18n="form_success" class="text-green-700 font-medium">Thank you! We'll get back to you within 24 hours.</p>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="lg:col-span-2 space-y-8">
+            <div>
+              <h3 data-i18n="contact_info_title" class="text-lg font-semibold text-gray-900 mb-4">Get in Touch</h3>
+              <div class="space-y-4">
+                <a href="mailto:hello@sitecraft.ca" class="flex items-center text-gray-600 hover:text-indigo-600 transition-colors">
+                  <svg class="w-5 h-5 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  hello@sitecraft.ca
+                </a>
+                <a href="tel:+15550000000" class="flex items-center text-gray-600 hover:text-indigo-600 transition-colors">
+                  <svg class="w-5 h-5 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                  +1 (403) 389-7950
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h3 data-i18n="contact_social_title" class="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+              <div class="flex space-x-4">
+                <!-- LinkedIn -->
+                <a href="#" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gray-100 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors" aria-label="LinkedIn">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gray-100 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors" aria-label="Instagram">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <!-- Facebook -->
+                <a href="#" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gray-100 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors" aria-label="Facebook">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="p-6 bg-gray-50 rounded-2xl">
+              <p data-i18n="contact_response_note" class="text-sm text-gray-500 leading-relaxed">
+                We respond to all inquiries within 24 hours during business days. For urgent requests, please call us directly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-gray-900 text-gray-400 py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:justify-between gap-10 mb-10">
+        <!-- Brand -->
+        <div class="max-w-sm">
+          <a href="#" class="text-2xl font-extrabold tracking-tight">
+            <span class="text-white">Site</span><span class="text-indigo-400">Craft</span>
+          </a>
+          <p data-i18n="footer_tagline" class="mt-3 text-gray-400 leading-relaxed">
+            Professional websites for Canadian startups and small businesses. Your success online starts here.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 data-i18n="footer_links_title" class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#stats" data-i18n="nav_why" class="hover:text-white transition-colors">Why a Website</a></li>
+            <li><a href="#benefits" data-i18n="nav_benefits" class="hover:text-white transition-colors">Benefits</a></li>
+            <li><a href="#packages" data-i18n="nav_packages" class="hover:text-white transition-colors">Packages</a></li>
+            <li><a href="#faq" data-i18n="nav_faq" class="hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="#contact" data-i18n="nav_contact" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 data-i18n="footer_contact_title" class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2.5">
+            <li><a href="mailto:hello@sitecraft.ca" class="hover:text-white transition-colors">hello@sitecraft.ca</a></li>
+            <li><a href="tel:+15550000000" class="hover:text-white transition-colors">+1 (555) 000-0000</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+        <p data-i18n="footer_copyright">&copy; 2026 SiteCraft. All rights reserved.</p>
+        <p class="flex items-center">
+          <span data-i18n="footer_made_in">Made with care in Canada</span>
+          <svg class="w-5 h-5 ml-1.5 text-red-500" fill="currentColor" viewBox="0 0 36 36"><path d="M18 2l2.3 7.1 7.5.1-6 4.4 2.2 7.2L18 16.4l-6 4.4 2.2-7.2-6-4.4 7.5-.1z"/></svg>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

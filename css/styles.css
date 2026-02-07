@@ -1,0 +1,160 @@
+/* ============================================
+   SiteCraft — Custom Styles
+   ============================================ */
+
+/* --- Base --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* --- Navbar shadow on scroll --- */
+#navbar.scrolled {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+}
+
+/* --- Language Switcher --- */
+.lang-btn.active {
+  background-color: #4F46E5;
+  color: #fff;
+}
+
+.lang-btn:not(.active) {
+  background-color: transparent;
+  color: #6B7280;
+}
+
+.lang-btn:not(.active):hover {
+  color: #374151;
+}
+
+/* --- FAQ Accordion --- */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-toggle:hover {
+  background-color: #FAFAFA;
+}
+
+/* --- Reveal Animation on Scroll --- */
+.reveal-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animation for grid children */
+.reveal-card:nth-child(2) { transition-delay: 0.1s; }
+.reveal-card:nth-child(3) { transition-delay: 0.2s; }
+.reveal-card:nth-child(4) { transition-delay: 0.3s; }
+.reveal-card:nth-child(5) { transition-delay: 0.4s; }
+.reveal-card:nth-child(6) { transition-delay: 0.5s; }
+
+/* --- Mobile Menu Animation --- */
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobile-menu.open {
+  max-height: 400px;
+  border-top: 1px solid #F3F4F6;
+}
+
+/* --- Smooth Focus Styles --- */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* --- Selection color --- */
+::selection {
+  background-color: #C7D2FE;
+  color: #312E81;
+}
+
+/* --- Hero background dots decoration --- */
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, #E5E7EB 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.4;
+  z-index: -5;
+}
+
+/* --- Smooth anchor scroll offset for fixed nav --- */
+:target {
+  scroll-margin-top: 80px;
+}
+
+/* --- Form submit button loading state --- */
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- Custom scrollbar (Webkit) --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
