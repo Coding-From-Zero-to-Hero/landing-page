@@ -411,22 +411,46 @@ function handleFormSubmit(event) {
   const form = document.getElementById('contact-form');
   const successMsg = document.getElementById('form-success');
   const submitBtn = form.querySelector('button[type="submit"]');
+  const t = translations[currentLang];
 
-  // Simulate sending
+  // Show loading state
   submitBtn.classList.add('btn-loading');
+  submitBtn.disabled = true;
   submitBtn.textContent = '';
 
-  setTimeout(() => {
-    submitBtn.classList.remove('btn-loading');
-    const t = translations[currentLang];
-    submitBtn.textContent = t.form_submit;
-    form.reset();
-    successMsg.classList.remove('hidden');
+  // Submit form data to Netlify
+  const formData = new URLSearchParams(new FormData(form)).toString();
 
-    setTimeout(() => {
-      successMsg.classList.add('hidden');
-    }, 5000);
-  }, 1200);
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: formData,
+  })
+    .then(response => {
+      submitBtn.classList.remove('btn-loading');
+      submitBtn.disabled = false;
+      submitBtn.textContent = t.form_submit;
+
+      if (response.ok) {
+        form.reset();
+        successMsg.classList.remove('hidden');
+        setTimeout(() => {
+          successMsg.classList.add('hidden');
+        }, 5000);
+      } else {
+        alert(currentLang === 'fr'
+          ? 'Une erreur est survenue. Veuillez réessayer.'
+          : 'Something went wrong. Please try again.');
+      }
+    })
+    .catch(() => {
+      submitBtn.classList.remove('btn-loading');
+      submitBtn.disabled = false;
+      submitBtn.textContent = t.form_submit;
+      alert(currentLang === 'fr'
+        ? 'Erreur de connexion. Veuillez réessayer.'
+        : 'Network error. Please try again.');
+    });
 
   return false;
 }
