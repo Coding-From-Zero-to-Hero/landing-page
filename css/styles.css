@@ -82,6 +82,18 @@ body {
   border-top: 1px solid #F3F4F6;
 }
 
+/* --- Active Nav Link --- */
+header nav a.active-nav {
+  color: #4F46E5;
+}
+
+/* --- Select focus --- */
+select:focus {
+  outline: none;
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
 /* --- Smooth Focus Styles --- */
 input:focus,
 textarea:focus {

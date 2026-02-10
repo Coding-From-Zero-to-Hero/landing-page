@@ -23,17 +23,15 @@ const translations = {
     hero_cta: "Get Started Today",
     hero_cta_secondary: "View Packages",
 
-    // Stats
-    stats_title: "Why Your Business Needs a Website",
-    stats_subtitle: "The numbers speak for themselves. In today's digital world, your online presence is your storefront.",
+    // Stats (compact banner)
     stat1_number: "97%",
-    stat1_text: "of consumers search online for local businesses before visiting",
+    stat1_text: "of consumers search online for local businesses",
     stat2_number: "75%",
-    stat2_text: "of users judge a company's credibility by its website design",
+    stat2_text: "judge credibility by website design",
     stat3_number: "81%",
-    stat3_text: "of shoppers research a business online before making a purchase",
+    stat3_text: "research online before making a purchase",
     stat4_number: "56%",
-    stat4_text: "of consumers don't trust a business that has no website",
+    stat4_text: "don't trust a business with no website",
 
     // Benefits
     benefits_title: "How a Website Helps Your Business Grow",
@@ -50,6 +48,23 @@ const translations = {
     benefit5_text: "Many small businesses still don't have a website. Getting online now puts you ahead of competitors who haven't made the leap.",
     benefit6_title: "Cost-Effective Marketing",
     benefit6_text: "A website is your most affordable long-term marketing tool. It works every day to attract, inform, and convert visitors into customers.",
+
+    // How It Works
+    process_title: "How It Works",
+    process_subtitle: "From idea to launch in four simple steps. We handle the hard parts so you don't have to.",
+    step1_title: "Tell Us Your Vision",
+    step1_text: "Share your business goals, style preferences, and the content you'd like on your website.",
+    step2_title: "We Design & Build",
+    step2_text: "Our team crafts a professional, mobile-ready website tailored specifically to your brand.",
+    step3_title: "Review & Refine",
+    step3_text: "You review the draft and request any changes. We refine until you're completely satisfied.",
+    step4_title: "Go Live",
+    step4_text: "We launch your website, set up your domain, and make sure everything runs perfectly.",
+
+    // About
+    about_title: "Meet Anton",
+    about_role: "Founder of SiteCraft",
+    about_text: "I started SiteCraft with a simple mission: to help Canadian small businesses and startups get a professional online presence without the complexity or high costs. Every project receives personal attention because I believe your website should be as unique as your business.",
 
     // Packages
     packages_title: "Simple, Transparent Packages",
@@ -73,6 +88,10 @@ const translations = {
     pkg2_f5: "Social media integration",
     pkg2_f6: "Priority support",
     pkg2_cta: "Get Started",
+
+    // Flexible pricing
+    flexible_text: "Every budget is welcome. If the pricing doesn't quite fit, reach out — we're happy to discuss flexible terms and find a solution that works for your business.",
+    flexible_cta: "Let's Talk",
 
     // FAQ
     faq_title: "Frequently Asked Questions",
@@ -102,6 +121,11 @@ const translations = {
     form_phone_label: "Phone",
     form_optional: "(optional)",
     form_phone_placeholder: "+1 (555) 000-0000",
+    form_package_label: "Interested In",
+    form_package_default: "I'm interested in...",
+    form_package_start: "Start Online ($500)",
+    form_package_grow: "Grow Online ($1,100)",
+    form_package_unsure: "Not sure yet",
     form_message_label: "Message",
     form_message_placeholder: "Tell us about your business and what you're looking for...",
     form_submit: "Send Message",
@@ -109,6 +133,10 @@ const translations = {
     contact_info_title: "Get in Touch",
     contact_social_title: "Follow Us",
     contact_response_note: "We respond to all inquiries within 24 hours during business days. For urgent requests, please call us directly.",
+
+    // Cookie
+    cookie_text: "We use cookies to improve your experience. By continuing to use this site, you agree to our use of cookies.",
+    cookie_accept: "Accept",
 
     // Footer
     footer_tagline: "Professional websites for Canadian startups and small businesses. Your success online starts here.",
@@ -136,17 +164,15 @@ const translations = {
     hero_cta: "Commencez aujourd'hui",
     hero_cta_secondary: "Voir les forfaits",
 
-    // Stats
-    stats_title: "Pourquoi votre entreprise a besoin d'un site web",
-    stats_subtitle: "Les chiffres parlent d'eux-m\u00eames. Dans le monde num\u00e9rique d'aujourd'hui, votre pr\u00e9sence en ligne est votre vitrine.",
+    // Stats (compact banner)
     stat1_number: "97\u00a0%",
-    stat1_text: "des consommateurs recherchent des entreprises locales en ligne avant de les visiter",
+    stat1_text: "recherchent des entreprises locales en ligne",
     stat2_number: "75\u00a0%",
-    stat2_text: "des utilisateurs jugent la cr\u00e9dibilit\u00e9 d'une entreprise par la conception de son site web",
+    stat2_text: "jugent la cr\u00e9dibilit\u00e9 par le site web",
     stat3_number: "81\u00a0%",
-    stat3_text: "des acheteurs font des recherches en ligne avant d'effectuer un achat",
+    stat3_text: "font des recherches en ligne avant d'acheter",
     stat4_number: "56\u00a0%",
-    stat4_text: "des consommateurs ne font pas confiance \u00e0 une entreprise sans site web",
+    stat4_text: "ne font pas confiance sans site web",
 
     // Benefits
     benefits_title: "Comment un site web aide votre entreprise \u00e0 cro\u00eetre",
@@ -163,6 +189,23 @@ const translations = {
     benefit5_text: "Beaucoup de petites entreprises n'ont toujours pas de site web. \u00catre en ligne maintenant vous place devant vos concurrents qui n'ont pas encore fait le pas.",
     benefit6_title: "Marketing rentable",
     benefit6_text: "Un site web est votre outil de marketing \u00e0 long terme le plus abordable. Il travaille chaque jour pour attirer, informer et convertir les visiteurs en clients.",
+
+    // How It Works
+    process_title: "Comment \u00e7a fonctionne",
+    process_subtitle: "De l'id\u00e9e au lancement en quatre \u00e9tapes simples. Nous g\u00e9rons les parties difficiles pour vous.",
+    step1_title: "Partagez votre vision",
+    step1_text: "D\u00e9crivez vos objectifs, vos pr\u00e9f\u00e9rences de style et le contenu souhait\u00e9 pour votre site web.",
+    step2_title: "Nous concevons et construisons",
+    step2_text: "Notre \u00e9quipe cr\u00e9e un site web professionnel et adapt\u00e9 aux mobiles, sp\u00e9cialement con\u00e7u pour votre marque.",
+    step3_title: "R\u00e9vision et ajustements",
+    step3_text: "Vous examinez le brouillon et demandez des modifications. Nous affinons jusqu'\u00e0 votre enti\u00e8re satisfaction.",
+    step4_title: "Mise en ligne",
+    step4_text: "Nous lan\u00e7ons votre site web, configurons votre domaine et nous assurons que tout fonctionne parfaitement.",
+
+    // About
+    about_title: "Rencontrez Anton",
+    about_role: "Fondateur de SiteCraft",
+    about_text: "J'ai cr\u00e9\u00e9 SiteCraft avec une mission simple\u00a0: aider les petites entreprises et startups canadiennes \u00e0 obtenir une pr\u00e9sence en ligne professionnelle sans complexit\u00e9 ni co\u00fbts \u00e9lev\u00e9s. Chaque projet re\u00e7oit une attention personnelle, car je crois que votre site web doit \u00eatre aussi unique que votre entreprise.",
 
     // Packages
     packages_title: "Des forfaits simples et transparents",
@@ -186,6 +229,10 @@ const translations = {
     pkg2_f5: "Int\u00e9gration des r\u00e9seaux sociaux",
     pkg2_f6: "Support prioritaire",
     pkg2_cta: "Commencer",
+
+    // Flexible pricing
+    flexible_text: "Chaque budget est le bienvenu. Si nos tarifs ne correspondent pas tout à fait, contactez-nous — nous serons ravis de discuter de conditions flexibles adaptées à votre entreprise.",
+    flexible_cta: "Discutons-en",
 
     // FAQ
     faq_title: "Foire aux questions",
@@ -215,6 +262,11 @@ const translations = {
     form_phone_label: "T\u00e9l\u00e9phone",
     form_optional: "(facultatif)",
     form_phone_placeholder: "+1 (555) 000-0000",
+    form_package_label: "Int\u00e9ress\u00e9 par",
+    form_package_default: "Je suis int\u00e9ress\u00e9 par...",
+    form_package_start: "Start Online (500\u00a0$)",
+    form_package_grow: "Grow Online (1\u00a0100\u00a0$)",
+    form_package_unsure: "Pas encore s\u00fbr",
     form_message_label: "Message",
     form_message_placeholder: "Parlez-nous de votre entreprise et de ce que vous recherchez...",
     form_submit: "Envoyer le message",
@@ -222,6 +274,10 @@ const translations = {
     contact_info_title: "Nous joindre",
     contact_social_title: "Suivez-nous",
     contact_response_note: "Nous r\u00e9pondons \u00e0 toutes les demandes dans les 24 heures les jours ouvrables. Pour les demandes urgentes, veuillez nous appeler directement.",
+
+    // Cookie
+    cookie_text: "Nous utilisons des cookies pour am\u00e9liorer votre exp\u00e9rience. En continuant \u00e0 utiliser ce site, vous acceptez notre utilisation des cookies.",
+    cookie_accept: "Accepter",
 
     // Footer
     footer_tagline: "Sites web professionnels pour les startups et les petites entreprises canadiennes. Votre succ\u00e8s en ligne commence ici.",
@@ -257,6 +313,14 @@ function setLanguage(lang) {
     const key = el.getAttribute('data-i18n-placeholder');
     if (t[key] !== undefined) {
       el.placeholder = t[key];
+    }
+  });
+
+  // Select options
+  document.querySelectorAll('[data-i18n-option]').forEach(el => {
+    const key = el.getAttribute('data-i18n-option');
+    if (t[key] !== undefined) {
+      el.textContent = t[key];
     }
   });
 
@@ -455,6 +519,123 @@ function handleFormSubmit(event) {
   return false;
 }
 
+// ─── CountUp Animation for Stats ────────────────
+function initCountUp() {
+  const counters = document.querySelectorAll('[data-countup]');
+  if (!counters.length) return;
+
+  let animated = false;
+  const statsSection = document.getElementById('stats');
+  if (!statsSection) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !animated) {
+        animated = true;
+        counters.forEach(el => {
+          const target = parseInt(el.getAttribute('data-countup'), 10);
+          const duration = 1500;
+          const start = performance.now();
+
+          function update(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            // ease-out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(eased * target);
+
+            // Preserve the suffix (% or non-breaking space + %)
+            const lang = currentLang;
+            if (lang === 'fr') {
+              el.textContent = current + '\u00a0%';
+            } else {
+              el.textContent = current + '%';
+            }
+
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            }
+          }
+
+          requestAnimationFrame(update);
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(statsSection);
+}
+
+// ─── Back to Top Button ─────────────────────────
+function initBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 400) {
+      btn.classList.remove('opacity-0', 'pointer-events-none');
+      btn.classList.add('opacity-100', 'pointer-events-auto');
+    } else {
+      btn.classList.remove('opacity-100', 'pointer-events-auto');
+      btn.classList.add('opacity-0', 'pointer-events-none');
+    }
+  };
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  toggleVisibility();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ─── Active Nav Highlight ───────────────────────
+function initActiveNav() {
+  const sections = document.querySelectorAll('main section[id]');
+  const navLinks = document.querySelectorAll('header nav a[href^="#"]');
+  if (!sections.length || !navLinks.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active-nav');
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active-nav');
+          }
+        });
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '-80px 0px -50% 0px'
+  });
+
+  sections.forEach(section => observer.observe(section));
+}
+
+// ─── Cookie Banner ──────────────────────────────
+function initCookieBanner() {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+  if (!banner || !acceptBtn) return;
+
+  const accepted = localStorage.getItem('sitecraft-cookies');
+  if (!accepted) {
+    // Show after a short delay
+    setTimeout(() => {
+      banner.classList.remove('hidden');
+    }, 1500);
+  }
+
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('sitecraft-cookies', 'accepted');
+    banner.classList.add('hidden');
+  });
+}
+
 // ─── Initialize Everything ─────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   setLanguage(currentLang);
@@ -463,4 +644,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initScrollReveal();
   initSmoothScroll();
+  initCountUp();
+  initBackToTop();
+  initActiveNav();
+  initCookieBanner();
 });
